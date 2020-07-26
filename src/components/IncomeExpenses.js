@@ -1,7 +1,30 @@
 import React, {useContext} from 'react'; 
 import {GlobalContext} from '../context/GlobalState'; 
 
+
+/////////////
+
+import { makeStyles } from '@material-ui/core/styles';
+
+
+const useStyles = makeStyles((theme) => ({
+  root: {
+    display: 'flex',
+    flexWrap: 'wrap',
+    '& > *': {
+      margin: theme.spacing(1),
+      width: theme.spacing(16),
+      height: theme.spacing(16),
+    },
+  },
+}));
+
+
+
+///////////
+
 export const IncomeExpenses = () => {
+  
   const {transactions} = useContext(GlobalContext);
 
   const amounts = transactions.map(transaction => transaction.amount);
@@ -19,15 +42,36 @@ export const IncomeExpenses = () => {
 
 
     return (
+
+   
+      
         <div className="inc-exp-container">
+
+         
         <div>
           <h4>Income</h4>
-    <p  className="money plus">{income}</p>
+          <p  className="money plus">{income}</p>
         </div>
         <div>
           <h4>Expense</h4>
-    <p  className="money minus">{expense}</p>
+        <p  className="money minus">{expense}</p>
         </div>
       </div>
     )
 }
+
+/*
+
+
+export default function SimplePaper() {
+  const classes = useStyles();
+
+  return (
+    <div className={classes.root}>
+      <Paper elevation={0} />
+      <Paper />
+      <Paper elevation={3} />
+    </div>
+  );
+}
+*/

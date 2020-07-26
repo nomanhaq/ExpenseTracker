@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300&family=Do+Hyeon&family=Lato:wght@300&family=Roboto+Mono:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@500&display=swap');
 
 :root {
-  --box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  --box-shadow: 0 1px 3px rgba(255, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
 
 * {
@@ -9,36 +11,47 @@
 }
 
 body {
-  background-color: hsl(10, 20%, 70%);
+  background: url(./components/images/jeremy-bishop-G9i_plbfDgk-unsplash\ \(2\).jpg);
   display: flex;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center center;
   flex-direction: column;
-  align-items: center;
+  align-items: none;  
   justify-content: center;
-  min-height: 100vh;
+  min-height: 10vh;
   margin: 0;
   font-family: 'Lato', sans-serif;
 }
 
 .container {
-  margin: 30px auto;
-  width: 350px;
+  margin: 26px auto;
+  width: 550px;
 }
 
 h1 {
+  color: #fff;
   letter-spacing: 1px;
   margin: 0;
 }
 
 h3 {
-  border-bottom: 1px solid rgb(224, 188, 188);
+  color: #fff;
   padding-bottom: 10px;
-  margin: 40px 0 10px;
+  margin: 1px 0 10px;
+}
+h2{
+  color: #fff;
+  padding-bottom: 10px;
+  margin: 1px 0 10px;
 }
 
 h4 {
+  color: rgb(0, 204, 255);
   margin: 0;
   text-transform: uppercase;
 }
+
 
 .inc-exp-container {
   background-color: #fff;
@@ -50,11 +63,13 @@ h4 {
 }
 
 .inc-exp-container > div {
+  
   flex: 1;
   text-align: center;
 }
 
 .inc-exp-container > div:first-of-type {
+  
   border-right: 1px solid #dedede;
 }
 
@@ -73,13 +88,14 @@ h4 {
 }
 
 label {
+  color: rgb(109, 109, 109);
   display: inline-block;
   margin: 10px 0;
 }
 
 input[type='text'],
 input[type='number'] {
-  border: 1px solid #dedede;
+  border: 2px solid #0099ff;
   border-radius: 2px;
   display: block;
   font-size: 16px;
@@ -89,9 +105,9 @@ input[type='number'] {
 
 .btn {
   cursor: pointer;
-  background-color: #9c88ff;
+  background-color: #585858;
   box-shadow: var(--box-shadow);
-  color: #fff;
+  color: rgb(255, 255, 255);
   border: 0;
   display: block;
   font-size: 16px;
@@ -99,7 +115,10 @@ input[type='number'] {
   padding: 10px;
   width: 100%;
 }
-
+.btn:hover{
+  
+  background-color: #0077ff;
+}
 .btn:focus,
 .delete-btn:focus {
   outline: 0;
@@ -112,7 +131,7 @@ input[type='number'] {
 }
 
 .list li {
-  background-color: #fff;
+  background-color: rgb(255, 255, 255);
   box-shadow: var(--box-shadow);
   color: #333;
   display: flex;
@@ -132,7 +151,7 @@ input[type='number'] {
 
 .delete-btn {
   cursor: pointer;
-  background-color: #e74c3c;
+  background-color: #ff1900;
   border: 0;
   color: #fff;
   font-size: 20px;
