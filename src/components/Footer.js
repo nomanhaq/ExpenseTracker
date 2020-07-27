@@ -1,8 +1,11 @@
-
+import React from 'react'
 
 export const Footer = () => {
-    return 
-      
-        
-    
+    return (
+        <h3 >
+            
+            <br/>
+            
+        </h3>
+    )
 }
